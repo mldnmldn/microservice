@@ -17,7 +17,8 @@ public class MovieController {
 	  Member vo  = getUserCommand.execute();
     return vo;
   }
-
+  
+  
   @Autowired
   private UserFeignClient userFeignClient;
 

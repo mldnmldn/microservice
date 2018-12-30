@@ -1,0 +1,29 @@
+server:
+  port: 8040
+spring:
+  application:
+    name: microservice-gateway-zuul
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      percentage: 1.0
+zuul:
+  thread-pool:
+    use-separate-thread-pools: true
+  ribbon-isolation-strategy: thread
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+logging:
+  level:
+    root: INFO
+    org.springframework.cloud.sleuth: DEBUG
+management:
+  security:
+    enabled: false
+
