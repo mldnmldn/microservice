@@ -1,2 +1,8 @@
 server:
   port: 8010
+feign:
+  client:
+    config:
+      feiginName:
+        connect-timeout: 5000
+        read-timeout: 10000
